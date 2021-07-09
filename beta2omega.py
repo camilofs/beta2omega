@@ -5,8 +5,6 @@ beta2omega.py: Backend to perform transformations from beta to omega
 __author__     = 'Camilo A. F. Salvador'
 __email__      = "cafsss@gmail.com"
 
-
-
 # -- INFO -- #
 The script works 3x3x3 bcc superell and direct coordinates (0-1);
 It will paste the positions from a VASP input file ignoring l1-l9 e.g.:
@@ -25,7 +23,7 @@ ll    #  0.333333  0.666666  1.000000  T T T
 ll    #  (...)
 
 The header of the POSCAR will be pasted into the OUTCAR file;
-The user selects the desired variant (1-4) with the folowing methods:
+The user selects the desired variant (1-4) with the folowing functions:
    - beta_to_omega1
    - beta_to_omega2
    - beta_to_omega3
@@ -33,8 +31,9 @@ The user selects the desired variant (1-4) with the folowing methods:
 
 # -- USAGE -- #
 import beta2omega
+from beta2omega import *
 
-
+print_to_file(beta_to_omega1(load_atoms()))
 '''
 
 # -- start --
